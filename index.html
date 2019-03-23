@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <title>Wild Dogs</title>
+</head>
+<body>
+
+<!-- login  -->
+<div data-role="page" id="login">
+    <section data-role="content" class="login">
+        <div class="login-header">
+            <img src="assets/dog-home-logo.png" alt="user icon">
+            <h1>wild <span>dogs</span</h1>
+        </div>
+        <div class="login-buttons">
+            <button><a href="#home">continue</a></button>
+            <button><a href="#home">login with facebook</a></button>
+        </div>
+    </section>
+</div>
+<!-- end login page  -->
+
+<!-- home ... dig map -->
+<div data-role="page" id="home">
+    <section data-role="content" class="map-page">
+        <div class="map"></div>
+        <div class="notification">
+            <p> Help us track wild dogs so we can help them!</p>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer data-role="footer" data-position="fixed" class="footer">
+        <div> <a href="#all-dogs"> <img src="assets/dog-footer-icon.png" alt="dog icon"></a></div>
+
+        <!-- Button trigger modal -->
+        <div> <a data-toggle="modal" data-target="#dogInput1"><i class="fas fa-plus"></i></a></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="dogInput1" tabindex="-1" role="dialog" aria-labelledby="dogInput" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="dogInput">Input wild dog sighting</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="location" class="ui-hidden-accessible">Location:</label>
+                            <input type="text" name="location" id="location" class="form-control" placeholder="Location">
+                            <label for="details" class="ui-hidden-accessible">details:</label>
+                            <input type="text" name="details" id="details" class="form-control" placeholder="details">
+                            <label for="bread" class="ui-hidden-accessible">bread:</label>
+                            <input type="text" name="bread" id="bread" class="form-control" placeholder="bread">
+                            <label for="name" class="ui-hidden-accessible">name:</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="name">
+                        </div>
+                        <div class="map-container">
+                            <div class="map"></div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div> <img src="assets/user-footer-icon.png" alt="user icon"></div>
+    </footer>
+    <!-- end footer -->
+
+</div>
+<!-- end home page ... dog map -->
+
+<!-- all dogs -->
+<div data-role="page" id="all-dogs">
+    <header data-role="header"  class="header">
+        <a href="#home" data-direction="reverse"><i class="fas fa-arrow-left"></i></a><h4>all dogs</h4>
+    </header>
+    <section data-role="content" class="dog-list">
+        <!-- <div class="single-dog">
+            <img src="assets/dog-img@2x.png" alt="dog">
+            <div class="brief-description">
+                <h3>dog name 1</h3>
+                <h4>location</h4>
+                <button> <a href="#dog-details"> see details</a></button>
+            </div>
+        </div>
+
+        <div class="single-dog">
+            <img src="assets/dog-img@2x.png" alt="dog">
+            <div class="brief-description">
+                <h3>dog name 2</h3>
+                <h4>location</h4>
+                <button>see details</button>
+            </div>
+        </div> -->
+    </section>
+    <!-- footer -->
+    <footer data-role="footer" data-position="fixed" class="footer">
+        <div> <a href="#all-dogs"> <img src="assets/dog-footer-icon.png" alt="dog icon"></a></div>
+
+        <!-- Button trigger modal -->
+        <div> <a data-toggle="modal" data-target="#dogInput2"><i class="fas fa-plus"></i></a></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="dogInput2" tabindex="-1" role="dialog" aria-labelledby="dogInput" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="dogInput">Input wild dog sighting</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="location" class="ui-hidden-accessible">Location:</label>
+                            <input type="text" name="location" id="location" class="form-control" placeholder="Location">
+                            <label for="details" class="ui-hidden-accessible">details:</label>
+                            <input type="text" name="details" id="details" class="form-control" placeholder="details">
+                            <label for="bread" class="ui-hidden-accessible">bread:</label>
+                            <input type="text" name="bread" id="bread" class="form-control" placeholder="bread">
+                            <label for="name" class="ui-hidden-accessible">name:</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="name">
+                        </div>
+                        <div class="map-container">
+                            <div class="map"></div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="newDog">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div> <img src="assets/user-footer-icon.png" alt="user icon"></div>
+    </footer>
+    <!-- end footer -->
+
+</div>
+<!-- end all dogs page -->
+    
+<!-- #dog-details -->
+<div data-role="page" id="dog-details">
+    <header data-role="header"  class="header">
+        <a href="#all-dogs" data-direction="reverse"><i class="fas fa-arrow-left"></i></a><h4>dog details</h4>
+    </header>
+    <section data-role="content" class="dog-details-area">
+        <div class="dog-details">
+            <img src="assets/dog-img@2x.png" alt="dog">
+            <div class="dog-description">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>bread</th>
+                            <td>golden retriever</td>
+                        </tr>
+                        <tr>
+                            <th>gender</th>
+                            <td>female</td>
+                        </tr>
+                        <tr>
+                            <th>color</th>
+                            <td>brown</td>
+                        </tr>
+                        <tr>
+                            <th>description</th>
+                            <td>beautiful animal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer data-role="footer" data-position="fixed" class="footer">
+        <div> <a href="#all-dogs"> <img src="assets/dog-footer-icon.png" alt="dog icon"></a></div>
+
+        <!-- Button trigger modal -->
+        <div> <a data-toggle="modal" data-target="#dogInput3"><i class="fas fa-plus"></i></a></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="dogInput3" tabindex="-1" role="dialog" aria-labelledby="dogInput" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="dogInput">Input wild dog sighting</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="location" class="ui-hidden-accessible">Location:</label>
+                            <input type="text" name="location" id="location" class="form-control" placeholder="Location">
+                            <label for="details" class="ui-hidden-accessible">details:</label>
+                            <input type="text" name="details" id="details" class="form-control" placeholder="details">
+                            <label for="bread" class="ui-hidden-accessible">bread:</label>
+                            <input type="text" name="bread" id="bread" class="form-control" placeholder="bread">
+                            <label for="name" class="ui-hidden-accessible">name:</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="name">
+                        </div>
+                        <div class="map-container">
+                            <div class="map"></div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div> <img src="assets/user-footer-icon.png" alt="user icon"></div>
+    </footer>
+    <!-- end footer -->
+
+</div>
+<!-- end #dog-details page -->
+
+<!-- success screen -->
+<div data-role="page" id="success">
+    <section data-role="content" class="success">
+        <div class="success-header">
+            <h1>success</h1>
+            <i class="fas fa-check"></i>
+            <p> you've helped a dog </p>
+        </div>
+        <div class="complete-buttons">
+            <button><a href="#home">done</a></button>
+        </div>
+    </section>
+</div>
+<!-- end success screen -->
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ6BSK8YBK6WIaClxPrWAwl3FrBAnboOY"></script>
+
+<script src="https://cdn.jsdelivr.net/gmap3/7.2.0/gmap3.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
